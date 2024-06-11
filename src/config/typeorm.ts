@@ -8,13 +8,13 @@ const config = {
   type: 'postgres',
   database: process.env.DB_NAME,
   host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
+  port: parseInt(process.env.DB_PORT, 10),
   username: process.env.DB_USERNAME,
   password: process.env.DB_PASSWORD,
   // dropSchema: true,
   autoLoadEntities: true,
   synchronize: true,
-  logging: false,
+  logging: true,
   entities: ['dist/**/*.entity{.ts,.js}'], //'dist/**/*.entity{.ts,.js}' o __dirname + '/../**/*.entity{.ts,.js}'
   migrations: ['dist/migrations/*{.ts,.js}']
 };
