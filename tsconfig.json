@@ -17,7 +17,7 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
-    "types": ["Multer", "jest", "node", "express"],
+    "types": ["multer", "jest", "node", "express"],
     "typeRoots": ["./node_modules/@types","./types"],
   }
 }
