@@ -32,7 +32,8 @@ async function bootstrap() {
       docExpansion: 'none',
     }
   });
-
-  await app.listen(3000);
+  console.log('Hola');
+  
+  await app.listen(PORT);
 }
 bootstrap();
