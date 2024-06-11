@@ -7,6 +7,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 const version = require('../package.json').version;
 
 async function bootstrap() {
+  console.log('Hola');
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(
     new ValidationPipe({
@@ -32,7 +33,6 @@ async function bootstrap() {
       docExpansion: 'none',
     }
   });
-  console.log('Hola');
   
   await app.listen(PORT);
 }
