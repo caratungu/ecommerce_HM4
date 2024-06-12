@@ -4,9 +4,6 @@ import { registerAs } from '@nestjs/config';
 
 dotenvConfig({ path: '.env.development' });
 
-console.log(process.env.DB_PORT);
-
-
 const config = {
   type: 'postgres',
   database: process.env.DB_NAME,
@@ -27,3 +24,6 @@ export default registerAs('typeorm', () => config)
 export const connectionSource = new DataSource(config as DataSourceOptions)
 
 export const PORT = process.env.PORT || 3000;
+
+console.log(parseInt(process.env.DB_PORT, 10))
+console.log("Hola ---->");
