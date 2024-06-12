@@ -16,19 +16,11 @@ const config = {
   synchronize: true,
   logging: true,
   entities: ['dist/**/*.entity{.ts,.js}'], //'dist/**/*.entity{.ts,.js}' o __dirname + '/../**/*.entity{.ts,.js}'
-  migrations: ['dist/migrations/*{.ts,.js}']
+  migrations: ['dist/migrations/*{.ts,.js}'],
 };
 
-export default registerAs('typeorm', () => config)
+export default registerAs('typeorm', () => config);
 
-export const connectionSource = new DataSource(config as DataSourceOptions)
+export const connectionSource = new DataSource(config as DataSourceOptions);
 
 export const PORT = process.env.PORT || 3000;
-
-console.log('----');
-console.log(process.env.DB_NAME);
-console.log(process.env.DB_HOST);
-console.log(parseInt(process.env.DB_PORT, 10));
-console.log(process.env.DB_USERNAME);
-console.log(process.env.DB_PASSWORD);
-console.log('----');
