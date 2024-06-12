@@ -25,5 +25,10 @@ export const connectionSource = new DataSource(config as DataSourceOptions)
 
 export const PORT = process.env.PORT || 3000;
 
-console.log(parseInt(process.env.DB_PORT, 10))
-console.log("Hola ---->");
+console.log('----');
+console.log(process.env.DB_NAME);
+console.log(process.env.DB_HOST);
+console.log(parseInt(process.env.DB_PORT, 10));
+console.log(process.env.DB_USERNAME);
+console.log(process.env.DB_PASSWORD);
+console.log('----');
