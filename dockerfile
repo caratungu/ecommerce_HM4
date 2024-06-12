@@ -1,5 +1,5 @@
 # Usa una imagen base de Node.js
-FROM node:14-alpine
+FROM node:20
 
 # Establece el directorio de trabajo
 WORKDIR /exommerce-caratungu
